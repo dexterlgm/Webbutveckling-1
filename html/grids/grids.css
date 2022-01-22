@@ -1,0 +1,101 @@
+body {
+    background-color: #d9d9d9;
+    /* Kod som gör att scrollbaren på sidan ej visas när qområdena blir större*/
+    overflow-x: hidden;
+}
+h1 {
+    text-align: center;
+    color: #2196F3;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+}
+
+/* Kod för vad som händer när man tar muspekaren över texten*/
+
+h1:hover {
+    transform: scale(1.2);
+    text-align: center;
+}
+
+/* Kod för vad som händer när man tar muspekaren över områdena*/
+
+div > .item1:hover {
+    transform: scale(1.03);
+}
+div > .item2:hover {
+    transform: scale(1.03);
+}
+div > .item3:hover {
+    transform: scale(1.03);
+}
+div > .item4:hover {
+    transform: scale(1.03);
+}
+
+.item1 > p {
+  margin-top: 20px;
+}
+.item2 > p {
+    margin-top: 75px;
+}
+.item3 > p {
+    margin-top: 75px;
+}
+.item4 > p {
+    margin-top: 20px;
+}
+
+/* Kod för de olika områdena*/
+.item1 { grid-area: header; 
+    border: solid;
+    border-color: lightgray;
+    background-image:linear-gradient(yellow,cyan);
+    height: 80px;
+    border-radius: 20px;
+}
+
+.item2 { grid-area: main;
+    border: solid;
+    border-color: lightgray;
+    background-image:linear-gradient(orange,red);
+    height: 184px;
+    border-radius: 20px;
+}
+
+.item3 { grid-area: right; 
+    border: solid;
+    border-color: lightgray;
+    background-image:linear-gradient(aqua, forestgreen);
+    height: 184px;
+    border-radius: 20px;
+}
+
+.item4 { grid-area: footer; 
+    border: solid;
+    border-color: lightgray;
+    background-image:linear-gradient(palevioletred,purple);
+    height: 80px;
+    border-radius: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+    padding: 10px;
+  margin-bottom: 5px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
